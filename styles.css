@@ -1,0 +1,67 @@
+body
+{
+  background-color : rgb(76,75,81);
+  margin-top: 30px;
+   
+}
+
+h1
+{
+  font-family: Georgia, serif;
+  color : rgb(255, 255, 255);
+  margin-left: 500px;
+  margin-top: 30px;
+}
+
+.info
+{
+  font-family: FreeMono, monospace;
+  color : rgb(255, 255, 255);
+  margin-left: 500px;
+  margin-right: 500px;
+
+}
+
+.nav
+{
+  font-family: "3270NerdFont", monospace;
+  color : rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1.2em;
+  display: inline-block;
+  transition: transform  0.3s ease;
+}
+
+.nav:hover
+{
+  transform: translateY(-5px);
+}
+
+.about
+{
+  margin-left: 500px;
+}
+
+.resume, .contact
+{
+  margin-left: 30px;
+}
+
+.resumeImage
+{
+  max-width: 100%;
+  height: auto;
+  margin-top: 30px;
+  border-radius: 12px;
+  transition: transform  0.3s ease;
+}
+
+.resumeImage:hover
+{
+  transform: scale(1.05);
+}
+
+.link
+{
+  color:rgb(139,176,229);
+}
