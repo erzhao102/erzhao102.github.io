@@ -1,67 +1,118 @@
-body
+:root 
 {
-  background-color : rgb(76,75,81);
-  margin-top: 30px;
-   
+  --width-xl: 42rem;
+  --space-s: .25rem;
+  --space-m: .5rem;
+  --space-l: 1rem;
+  --space-xl: 1.5rem;
+  --space-xxl: 2rem;
+  --radius-m: 12px;
+  --fg: rgb(255,255,255);
+  --bg: rgb(76,75,81);
 }
 
-h1
+*,*::before,*::after 
+{ 
+  box-sizing: border-box; 
+}
+
+html, body 
+{ 
+  height: 100%; 
+}
+
+body 
+{
+  margin: 0;
+  max-width: var(--width-xl, 36rem);
+  margin: var(--space-xxl) auto;
+  padding: 0 var(--space-l);
+  background: var(--bg);
+  color: var(--fg);
+  font-family: FreeMono, monospace;
+}
+
+.smoothed 
+{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 
 {
   font-family: Georgia, serif;
-  color : rgb(255, 255, 255);
-  margin-left: 500px;
-  margin-top: 30px;
+  margin: var(--space-xxl) 0 var(--space-l);
 }
 
-.info
+.info 
 {
-  font-family: FreeMono, monospace;
-  color : rgb(255, 255, 255);
-  margin-left: 500px;
-  margin-right: 500px;
-
+  line-height: 1.6;
+  margin: 0 0 var(--space-xxl);
 }
 
-.nav
+.nav 
 {
   font-family: "3270NerdFont", monospace;
-  color : rgb(255, 255, 255);
+  color: var(--fg);
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   display: inline-block;
-  transition: transform  0.3s ease;
+  transition: transform .3s ease;
+  margin-right: var(--space-l);
 }
 
-.nav:hover
-{
-  transform: translateY(-5px);
+.nav:last-child 
+{ 
+  margin-right: 0; 
 }
 
-.about
-{
-  margin-left: 500px;
+.nav:hover 
+{ 
+  transform: translateY(-5px); 
 }
 
-.resume, .contact
-{
-  margin-left: 30px;
+.about 
+{ 
+  margin-top: var(--space-xl); 
 }
 
-.resumeImage
+.resume,.contact 
+{ 
+  margin-left: var(--space-l); 
+}
+
+.resumeImage 
 {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  margin-top: 30px;
-  border-radius: 12px;
-  transition: transform  0.3s ease;
+  margin-top: var(--space-xxl);
+  border-radius: var(--radius-m);
+  transition: transform .3s ease;
 }
 
-.resumeImage:hover
-{
-  transform: scale(1.05);
+.resumeImage:hover 
+{ 
+  transform: scale(1.05); 
 }
 
-.link
+.link 
 {
-  color:rgb(139,176,229);
+  color: rgb(139,176,229); 
+}
+
+@media (max-width: 600px) 
+{
+  body 
+  { 
+    margin: var(--space-xl) auto; 
+  }
+  h1
+  { 
+    font-size: 1.5rem; 
+    text-align: center; 
+  }
+  .nav 
+  { 
+    font-size: 1rem; 
+  }
 }
